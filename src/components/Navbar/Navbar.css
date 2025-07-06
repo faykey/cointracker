@@ -76,9 +76,9 @@
     .navbar {
         padding: 20px 5%;
     }
-    .navbar ul {
-        display:none
-    }
+        .navbar ul li:first-child {
+            display: none;
+        }
     .navbar button img {
         width:12px;
     }

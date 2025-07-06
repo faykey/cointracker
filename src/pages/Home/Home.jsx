@@ -32,7 +32,7 @@ const Home = () => {
           Live prices, trending tokens, and crypto news — all in one dashboard
         </p>
         <form onSubmit={searchHandler}>
-          <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='Search coin' required />
+          <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='Search coin' required style={{ color: "black" }} />
           
           <datalist id='coinlist'>
             {allCoin.map((item, index) => (

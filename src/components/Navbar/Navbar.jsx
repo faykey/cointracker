@@ -31,15 +31,16 @@ const Navbar = () => {
     }
 
   return (
-      <div className='navbar'>
-          <Link to={`/`}>
-            <img src={logo} alt='logo' className='logo' />
+      <div className="navbar">
+          <Link to="/">
+              <img src={logo} alt="logo" className="logo" />
           </Link>
-          
+
           <ul>
-              <Link to={`/`}><li>HOME</li></Link>
-              <li>NEWS</li>
+              <li><Link to="/">HOME</Link></li>
+              <li><Link to="/news">NEWS</Link></li>
           </ul>
+  
           <div className='nav-right'>
               <select onChange={currencyHandler}>
                   <option value="usd">USD</option>
