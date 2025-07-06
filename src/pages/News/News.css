@@ -42,12 +42,13 @@
   padding: 1rem;
   text-decoration: none;
   color: #ffffff;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .news-card:hover {
-  transform: scale(1.02);
-}
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 224, 170, 0.2);
+  }
 
 .news-img {
   width: 100%;
