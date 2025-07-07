@@ -9,8 +9,14 @@ const Home = () => {
   const [input, setInput] = useState('');
 
   const inputHandler = (event) => {
-    setInput(event.target.value);
-  }
+    const value = event.target.value;
+    setInput(value);
+
+    if (value.trim() === '') {
+      setDisplayCoin(allCoin); // Reset table when input is cleared
+    }
+  };
+  
 
   const searchHandler = async (event) => {
     event.preventDefault();
@@ -27,9 +33,9 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='hero'>
-        <h1>Crypto Radar</h1>
+
         <p>
-          Live prices, trending tokens, and crypto news — all in one dashboard
+          Real-time crypto prices with the latest market headlines.
         </p>
         <form onSubmit={searchHandler}>
           <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='Search coin' required style={{ color: "black" }} />
@@ -59,7 +65,7 @@ const Home = () => {
                 <img src={item.image} alt="" />
                 <p>{item.name + " - " + item.symbol} </p>
               </div>
-              <p>{currency.symbol} {item.current_price}</p>
+              <p>{currency.symbol} {item.current_price.toLocaleString()}</p>
               <p className={item.price_change_percentage_24h>0?"green":"red"}>{Math.floor(item.price_change_percentage_24h * 100) / 100 + "%"}</p>
               <p className='market-cap'>{currency.symbol} {item.market_cap.toLocaleString()}</p>
             </Link>

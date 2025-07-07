@@ -20,6 +20,18 @@ const Navbar = () => {
                 setCurrency({ name: "eur", symbol: "€" });
                 break;
             }
+            case "gbp":
+                setCurrency({ name: "gbp", symbol: "£" });
+                break;
+            case "jpy":
+                setCurrency({ name: "jpy", symbol: "¥" });
+                break;
+            case "inr":
+                setCurrency({ name: "inr", symbol: "₹" });
+                break;
+            case "cad":
+                setCurrency({ name: "cad", symbol: "C$" });
+                break;
             case "ngn": {
                 setCurrency({ name: "ngn", symbol: "₦" });
                 break;
@@ -50,6 +62,11 @@ const Navbar = () => {
               <select onChange={currencyHandler}>
                   <option value="usd">USD</option>
                   <option value="eur">EUR</option>
+                  <option value="gbp">GBP</option>
+                  <option value="jpy">JPY</option>
+                  <option value="inr">INR</option>
+                  <option value="cad">CAD</option>
+                  <option value="aud">AUD</option>
                   <option value="ngn">NGN</option>
               </select>
           </div>

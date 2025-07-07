@@ -93,6 +93,10 @@
     color: rgb(149, 42, 42);
     text-align: center;
 }
+input::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+  
 @media (max-width: 768px) {
     .table-layout {
         grid-template-columns: 0.5fr 3fr 1fr 1fr;

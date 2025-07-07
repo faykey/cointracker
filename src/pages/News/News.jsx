@@ -4,11 +4,12 @@ import "./News.css";
 const News = () => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [query, setQuery] = useState("crypto");
     const [filteredSource, setFilteredSource] = useState("All");
+    const [query, setQuery] = useState("crypto");
 
     const API_KEY = import.meta.env.VITE_GNEWS_API_KEY;
-    const endpoint = `https://gnews.io/api/v4/search?q=${query}&lang=en&token=${API_KEY}`;
+    const endpoint = `https://gnews.io/api/v4/search?q=crypto&lang=en&token=${API_KEY}`;
+
 
     useEffect(() => {
         const fetchNews = async () => {
@@ -38,13 +39,6 @@ const News = () => {
             <h1 className="news-title">Latest Crypto News</h1>
 
             <div className="news-controls">
-                <input
-                    type="text"
-                    placeholder="Search news..."
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    className="news-search"
-                />
                 <select
                     value={filteredSource}
                     onChange={(e) => setFilteredSource(e.target.value)}
