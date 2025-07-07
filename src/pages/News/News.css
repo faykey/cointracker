@@ -1,6 +1,6 @@
 .news-container {
   padding: 2rem;
-  background-color: #05001a;
+  background: linear-gradient( #05001a, #0d1b3d,rgb(2, 33, 38));
   min-height: 100vh;
   color: #ffffff;
 }
